@@ -7,24 +7,24 @@
 * Sesuaikan nama di terraform/variables.tf dan terraform/module/*/variables.tf --> untuk final diset devops-telkomsel-7
 
 ### Terraform
-cd terraform
-terraform init
-terraform plan
-terraform apply
+- cd terraform
+- terraform init
+- terraform plan
+- terraform apply
 
 ### Ansible
 Prerequisite : set IP VM yg baru dibuat di file ansible/inventory/hosts
 
-cd ../ansible/
-ansible -m ping all
-ansible-playbook -i inventory/hosts playbook/install-java-playbook.yml
-ansible-playbook -i inventory/hosts playbook/install-jenkins-playbook.yml
+- cd ../ansible/
+- ansible -m ping all
+- ansible-playbook -i inventory/hosts playbook/install-java-playbook.yml
+- ansible-playbook -i inventory/hosts playbook/install-jenkins-playbook.yml
 
 
 ### Setup Jenkins
-buka browser http://[IP_VM]:8080 dan ikuti instruksi
+Buka browser http://[IP_VM]:8080 dan ikuti instruksi
 
-install plugin :
+Install plugin :
 -	Plugin: Blue Ocean
 -	Plugin: Kubernetes CLI
 -	Plugin: docker-build-step
@@ -41,4 +41,4 @@ Manage Credential :
 - Github account
 
 ### Buat new multibranch pipeline
-
+- Set sendiri ya..
