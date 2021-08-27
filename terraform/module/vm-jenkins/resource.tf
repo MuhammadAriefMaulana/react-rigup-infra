@@ -2,7 +2,7 @@ resource "google_compute_instance" "devops7-instance-1" {
   name         = "${var.name}-instance-1"
   machine_type = var.machine_type
 
-  tags = ["${var.name}-jenkins_server"]
+  tags = ["${var.name}-jenkins-server"]
 
   boot_disk {
     initialize_params {
