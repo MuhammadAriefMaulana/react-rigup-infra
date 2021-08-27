@@ -4,7 +4,7 @@ pipeline {
         SERVICE_ACCOUNT = 'devops-telkomsel-7-new@group7-322208.iam.gserviceaccount.com'
         KEY_TEXT = credentials('devops-telkomsel-7-new-SA-text') //add di credential
         KEY_FILE = 'devops-telkomsel-7-new-SA' //add di credential
-        KUBE_CLUSTER = 'mariefm-2'
+        // KUBE_CLUSTER = 'mariefm-2'
         // KUBE_ZONE = 'us-west2-a'
         // PROJECT_ID = 'group7-322208'
         // NAMESPACE = 'mariefm'
@@ -21,8 +21,6 @@ pipeline {
             }
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
-                // sh 'sudo groupadd docker'
-                // sh 'sudo usermod -aG docker $USER'
                 sh './jenkins/scripts/test.sh'
             }
         }
