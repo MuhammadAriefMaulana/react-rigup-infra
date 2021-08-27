@@ -30,9 +30,10 @@ Install plugin :
 -	Plugin: docker-build-step
 -	Plugin: docker pipeline
 
-sudo groupadd docker
-sudo usermod -aG docker jenkins
-sudo systemctl restart jenkins
+SSH ke VM :
+- sudo groupadd docker
+- sudo usermod -aG docker jenkins
+- sudo systemctl restart jenkins
 
 Manage Credential :
 - Dockerhub
